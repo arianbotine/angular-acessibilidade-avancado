@@ -8,7 +8,7 @@ export class ModalService {
 }
 
 export interface ModalConfig {
-  tempalteRef: TemplateRef<any>;
+  templateRef: TemplateRef<any>;
   title: string;
 }
 
