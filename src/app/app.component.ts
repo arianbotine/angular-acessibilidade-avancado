@@ -2,7 +2,6 @@ import { Component, TemplateRef, ViewChild } from '@angular/core';
 import {
   ModalRef,
   ModalService,
-  ModalConfig,
 } from './shared/components/modal/services/modal.service';
 
 @Component({
@@ -23,5 +22,6 @@ export class AppComponent {
       templateRef: this.modalTemplateRef,
       title: 'User Details',
     });
+    this.modalRef.close();
   }
 }
