@@ -1,15 +1,11 @@
 import { Injectable, TemplateRef } from '@angular/core';
+import { ModalConfig } from '../interfaces/modal-config';
 
 @Injectable()
 export class ModalService {
   public open(config: ModalConfig): ModalRef {
     return new ModalRef();
   }
-}
-
-export interface ModalConfig {
-  templateRef: TemplateRef<any>;
-  title: string;
 }
 
 export class ModalRef {
