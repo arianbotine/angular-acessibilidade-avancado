@@ -11,6 +11,8 @@ export class FocusBackDirective implements OnInit, OnDestroy {
     this.lastFocusabledElement = document.activeElement;
   }
   ngOnDestroy(): void {
-    (this.lastFocusabledElement as HTMLElement).focus();
+    if (this.lastFocusabledElement) {
+      (this.lastFocusabledElement as HTMLElement).focus();
+    }
   }
 }
